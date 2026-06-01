@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APCRDA Finance Portfolio Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar" aria-label="Primary">
+      <div class="brand">
+        <span class="brand-mark">A</span>
+        <div>
+          <strong>APCRDA Finance Portfolio Tool</strong>
+          <small>Localhost-ready web version of the 4 Python Excel dashboards</small>
+        </div>
+      </div>
+      <div class="run-chip">Run: <code>npm start</code></div>
+    </nav>
+
+    <section class="hero-grid">
+      <div>
+        <p class="eyebrow">Unified exhibit dataset</p>
+        <h1>One local website for UC compliance, contractor aging, budget velocity, and PPP liabilities.</h1>
+        <p class="lede">This tool converts the four standalone finance analytics scripts into a browser dashboard with searchable records, portfolio KPIs, risk charts, and CSV export for presentations or local review.</p>
+        <div class="hero-actions">
+          <a href="#workspace" class="button primary">Open dashboard</a>
+          <button class="button ghost" id="download-current">Export current CSV</button>
+        </div>
+      </div>
+      <aside class="insight-card">
+        <span>Portfolio at a glance</span>
+        <strong id="portfolio-total">Loading…</strong>
+        <p id="portfolio-risk">Preparing risk summary.</p>
+      </aside>
+    </section>
+  </header>
+
+  <main id="workspace" class="shell">
+    <section class="controls" aria-label="Dashboard controls">
+      <div>
+        <label for="tool-select">Choose tool</label>
+        <select id="tool-select"></select>
+      </div>
+      <div>
+        <label for="search-input">Search records</label>
+        <input id="search-input" type="search" placeholder="Scheme, contractor, sector…">
+      </div>
+      <div>
+        <label for="status-filter">Risk / status</label>
+        <select id="status-filter"><option value="all">All statuses</option></select>
+      </div>
+    </section>
+
+    <section class="tool-intro">
+      <div>
+        <p class="eyebrow" id="source-file"></p>
+        <h2 id="tool-title"></h2>
+        <p id="tool-description"></p>
+      </div>
+      <div class="dataset-meta">
+        <span>Dataset date</span>
+        <strong id="dataset-date"></strong>
+      </div>
+    </section>
+
+    <section id="kpi-grid" class="kpi-grid" aria-label="Key performance indicators"></section>
+
+    <section class="analytics-grid">
+      <article class="panel">
+        <div class="panel-heading">
+          <h3>Risk distribution</h3>
+          <span id="risk-count"></span>
+        </div>
+        <div id="risk-chart" class="chart" aria-label="Risk distribution chart"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-heading">
+          <h3>Top exposure</h3>
+          <span id="amount-label"></span>
+        </div>
+        <div id="amount-chart" class="bar-list" aria-label="Top exposure chart"></div>
+      </article>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="panel-heading">
+        <div>
+          <h3>Dataset explorer</h3>
+          <p id="record-count"></p>
+        </div>
+        <button class="button compact" id="download-table">Download CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table id="data-table"></table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Data is synthetic but structurally aligned to the Python files. Replace <code>website/data/dashboard-data.json</code> with real registers when ready.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

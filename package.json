@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "start": "node website/server.js",
+    "serve": "node website/server.js"
+  },
+  "devDependencies": {}
+}

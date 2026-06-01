@@ -1,0 +1,107 @@
+// Fallback dataset for opening website/index.html directly from the file system.
+window.DASHBOARD_DATA = {
+  "generatedOn": "2026-06-01",
+  "currency": "₹ Crore",
+  "tools": [
+    {
+      "id": "uc",
+      "title": "UC Compliance Dashboard",
+      "sourceFile": "project1_uc_dashboard.py",
+      "description": "Tracks Utilization Certificate filing, overdue tranches, reconciliation gaps, and next-tranche release risk across CSS, State, and EAP schemes.",
+      "statusField": "Risk_Band",
+      "amountField": "UC_Pending_Cr",
+      "dateField": "UC_Due_Date",
+      "kpis": [
+        { "label": "Schemes", "value": 8, "suffix": "" },
+        { "label": "Total sanction", "value": 3168, "suffix": " Cr" },
+        { "label": "UC pending", "value": 344.7, "suffix": " Cr" },
+        { "label": "Overdue UCs", "value": 5, "suffix": "" }
+      ],
+      "records": [
+        { "Scheme_ID": "APCRDA-2023-001", "Scheme_Name": "AMRUT 2.0 - Water Supply", "Funding_Type": "CSS", "Total_Sanction_Cr": 320, "Total_Released_Cr": 218.4, "Total_Expended_Cr": 176.8, "UC_Submitted_Cr": 125.6, "UC_Pending_Cr": 51.2, "UC_Due_Date": "2026-03-15", "Days_Overdue": 78, "Risk_Band": "HIGH" },
+        { "Scheme_ID": "APCRDA-2023-002", "Scheme_Name": "AMRUT 2.0 - Sewerage", "Funding_Type": "CSS", "Total_Sanction_Cr": 180, "Total_Released_Cr": 119.7, "Total_Expended_Cr": 88.4, "UC_Submitted_Cr": 68.1, "UC_Pending_Cr": 20.3, "UC_Due_Date": "2026-07-30", "Days_Overdue": 0, "Risk_Band": "MEDIUM" },
+        { "Scheme_ID": "APCRDA-2023-003", "Scheme_Name": "Smart City Mission - Core Infra", "Funding_Type": "CSS", "Total_Sanction_Cr": 450, "Total_Released_Cr": 287.6, "Total_Expended_Cr": 241.5, "UC_Submitted_Cr": 180.2, "UC_Pending_Cr": 61.3, "UC_Due_Date": "2026-01-22", "Days_Overdue": 130, "Risk_Band": "CRITICAL" },
+        { "Scheme_ID": "APCRDA-2023-004", "Scheme_Name": "PMAY-Urban - Housing", "Funding_Type": "CSS", "Total_Sanction_Cr": 210, "Total_Released_Cr": 130.2, "Total_Expended_Cr": 102.4, "UC_Submitted_Cr": 82.8, "UC_Pending_Cr": 19.6, "UC_Due_Date": "2026-05-20", "Days_Overdue": 12, "Risk_Band": "MEDIUM" },
+        { "Scheme_ID": "APCRDA-2024-005", "Scheme_Name": "AP State Capital Roads Ph-I", "Funding_Type": "State", "Total_Sanction_Cr": 560, "Total_Released_Cr": 394.4, "Total_Expended_Cr": 331.9, "UC_Submitted_Cr": 295.7, "UC_Pending_Cr": 36.2, "UC_Due_Date": "2026-08-18", "Days_Overdue": 0, "Risk_Band": "LOW" },
+        { "Scheme_ID": "APCRDA-2024-006", "Scheme_Name": "World Bank - Urban Infra", "Funding_Type": "EAP", "Total_Sanction_Cr": 780, "Total_Released_Cr": 512.1, "Total_Expended_Cr": 404.6, "UC_Submitted_Cr": 318.7, "UC_Pending_Cr": 85.9, "UC_Due_Date": "2026-02-11", "Days_Overdue": 110, "Risk_Band": "CRITICAL" },
+        { "Scheme_ID": "APCRDA-2024-007", "Scheme_Name": "ADB - Resilient Infra", "Funding_Type": "EAP", "Total_Sanction_Cr": 620, "Total_Released_Cr": 401.5, "Total_Expended_Cr": 315.2, "UC_Submitted_Cr": 248.6, "UC_Pending_Cr": 66.6, "UC_Due_Date": "2026-04-09", "Days_Overdue": 53, "Risk_Band": "HIGH" },
+        { "Scheme_ID": "APCRDA-2024-008", "Scheme_Name": "HRIDAY - Heritage Areas", "Funding_Type": "CSS", "Total_Sanction_Cr": 48, "Total_Released_Cr": 31.8, "Total_Expended_Cr": 22.9, "UC_Submitted_Cr": 19.3, "UC_Pending_Cr": 3.6, "UC_Due_Date": "2026-09-05", "Days_Overdue": 0, "Risk_Band": "LOW" }
+      ]
+    },
+    {
+      "id": "contractor",
+      "title": "Contractor Bill Aging & MSME Interest",
+      "sourceFile": "project2_contractor_aging.py",
+      "description": "Monitors bill pendency, statutory MSME interest exposure, contractor-wise overdue amounts, and work-stoppage risk.",
+      "statusField": "Aging_Bucket",
+      "amountField": "Net_Payable_Cr",
+      "dateField": "Bill_Received_Date",
+      "kpis": [
+        { "label": "Bills tracked", "value": 8, "suffix": "" },
+        { "label": "Net payable", "value": 77.8, "suffix": " Cr" },
+        { "label": "MSME interest", "value": 2.84, "suffix": " Cr" },
+        { "label": ">90 day bills", "value": 4, "suffix": "" }
+      ],
+      "records": [
+        { "Bill_ID": "BILL-2026-001", "Contractor": "Vijaya Infra Projects", "Package": "Seed Access Road Pkg-1", "MSME": "YES", "Bill_Received_Date": "2026-01-16", "Days_Pending": 136, "Gross_Bill_Cr": 14.8, "Net_Payable_Cr": 12.7, "MSME_Interest_Cr": 1.12, "Aging_Bucket": ">90 DAYS", "Stall_Risk": "HIGH" },
+        { "Bill_ID": "BILL-2026-002", "Contractor": "Amaravati Utilities JV", "Package": "Water Grid Zone A", "MSME": "NO", "Bill_Received_Date": "2026-03-08", "Days_Pending": 85, "Gross_Bill_Cr": 21.4, "Net_Payable_Cr": 18.9, "MSME_Interest_Cr": 0, "Aging_Bucket": "61-90 DAYS", "Stall_Risk": "MEDIUM" },
+        { "Bill_ID": "BILL-2026-003", "Contractor": "Krishna Earthmovers", "Package": "Storm Water Drain S2", "MSME": "YES", "Bill_Received_Date": "2025-12-19", "Days_Pending": 164, "Gross_Bill_Cr": 8.1, "Net_Payable_Cr": 6.8, "MSME_Interest_Cr": 0.84, "Aging_Bucket": ">90 DAYS", "Stall_Risk": "HIGH" },
+        { "Bill_ID": "BILL-2026-004", "Contractor": "Navayuga Urban Works", "Package": "Government Complex Roads", "MSME": "NO", "Bill_Received_Date": "2026-04-22", "Days_Pending": 40, "Gross_Bill_Cr": 11.2, "Net_Payable_Cr": 9.7, "MSME_Interest_Cr": 0, "Aging_Bucket": "31-60 DAYS", "Stall_Risk": "LOW" },
+        { "Bill_ID": "BILL-2026-005", "Contractor": "Delta Electricals", "Package": "Street Lighting Phase II", "MSME": "YES", "Bill_Received_Date": "2026-02-01", "Days_Pending": 120, "Gross_Bill_Cr": 5.6, "Net_Payable_Cr": 4.9, "MSME_Interest_Cr": 0.52, "Aging_Bucket": ">90 DAYS", "Stall_Risk": "HIGH" },
+        { "Bill_ID": "BILL-2026-006", "Contractor": "Capital Landscaping LLP", "Package": "Green Grid Segment 4", "MSME": "YES", "Bill_Received_Date": "2026-05-11", "Days_Pending": 21, "Gross_Bill_Cr": 3.7, "Net_Payable_Cr": 3.1, "MSME_Interest_Cr": 0.05, "Aging_Bucket": "0-30 DAYS", "Stall_Risk": "LOW" },
+        { "Bill_ID": "BILL-2026-007", "Contractor": "Prakasam Structures", "Package": "Canal Bridge C3", "MSME": "NO", "Bill_Received_Date": "2026-02-18", "Days_Pending": 103, "Gross_Bill_Cr": 17.5, "Net_Payable_Cr": 15.3, "MSME_Interest_Cr": 0, "Aging_Bucket": ">90 DAYS", "Stall_Risk": "HIGH" },
+        { "Bill_ID": "BILL-2026-008", "Contractor": "Guntur Precast", "Package": "Housing Blocks H7", "MSME": "YES", "Bill_Received_Date": "2026-04-02", "Days_Pending": 60, "Gross_Bill_Cr": 7.2, "Net_Payable_Cr": 6.4, "MSME_Interest_Cr": 0.31, "Aging_Bucket": "31-60 DAYS", "Stall_Risk": "MEDIUM" }
+      ]
+    },
+    {
+      "id": "budget",
+      "title": "Budget Velocity & Lapse Risk",
+      "sourceFile": "project3_budget_velocity.py",
+      "description": "Compares releases, expenditure velocity, monthly burn rate, remaining budget, and lapse risk before financial-year close.",
+      "statusField": "Lapse_Risk",
+      "amountField": "Balance_Budget_Cr",
+      "dateField": "Last_Expenditure_Date",
+      "kpis": [
+        { "label": "FY budget", "value": 1280, "suffix": " Cr" },
+        { "label": "Spent", "value": 662, "suffix": " Cr" },
+        { "label": "Balance", "value": 618, "suffix": " Cr" },
+        { "label": "High lapse risk", "value": 5, "suffix": "" }
+      ],
+      "records": [
+        { "Scheme_Code": "BUD-001", "Scheme_Name": "Capital Road Network", "Annual_Budget_Cr": 260, "Released_Cr": 187, "Expended_Cr": 142, "Balance_Budget_Cr": 118, "Utilization_Pct": 54.6, "Monthly_Burn_Rate_Cr": 15.8, "Required_Burn_Rate_Cr": 29.5, "Last_Expenditure_Date": "2026-05-22", "Lapse_Risk": "HIGH" },
+        { "Scheme_Code": "BUD-002", "Scheme_Name": "Water Supply Trunk Lines", "Annual_Budget_Cr": 180, "Released_Cr": 141, "Expended_Cr": 112, "Balance_Budget_Cr": 68, "Utilization_Pct": 62.2, "Monthly_Burn_Rate_Cr": 12.4, "Required_Burn_Rate_Cr": 17, "Last_Expenditure_Date": "2026-05-27", "Lapse_Risk": "MEDIUM" },
+        { "Scheme_Code": "BUD-003", "Scheme_Name": "Government Complex Utilities", "Annual_Budget_Cr": 210, "Released_Cr": 136, "Expended_Cr": 74, "Balance_Budget_Cr": 136, "Utilization_Pct": 35.2, "Monthly_Burn_Rate_Cr": 8.2, "Required_Burn_Rate_Cr": 34, "Last_Expenditure_Date": "2026-04-29", "Lapse_Risk": "CRITICAL" },
+        { "Scheme_Code": "BUD-004", "Scheme_Name": "Housing Infrastructure", "Annual_Budget_Cr": 160, "Released_Cr": 119, "Expended_Cr": 91, "Balance_Budget_Cr": 69, "Utilization_Pct": 56.9, "Monthly_Burn_Rate_Cr": 10.1, "Required_Burn_Rate_Cr": 17.3, "Last_Expenditure_Date": "2026-05-18", "Lapse_Risk": "HIGH" },
+        { "Scheme_Code": "BUD-005", "Scheme_Name": "Green Grid & Parks", "Annual_Budget_Cr": 75, "Released_Cr": 52, "Expended_Cr": 48, "Balance_Budget_Cr": 27, "Utilization_Pct": 64, "Monthly_Burn_Rate_Cr": 5.3, "Required_Burn_Rate_Cr": 6.8, "Last_Expenditure_Date": "2026-05-25", "Lapse_Risk": "LOW" },
+        { "Scheme_Code": "BUD-006", "Scheme_Name": "ICT Smart City Works", "Annual_Budget_Cr": 95, "Released_Cr": 64, "Expended_Cr": 38, "Balance_Budget_Cr": 57, "Utilization_Pct": 40, "Monthly_Burn_Rate_Cr": 4.2, "Required_Burn_Rate_Cr": 14.3, "Last_Expenditure_Date": "2026-05-03", "Lapse_Risk": "HIGH" },
+        { "Scheme_Code": "BUD-007", "Scheme_Name": "Flood Resilience Drains", "Annual_Budget_Cr": 140, "Released_Cr": 102, "Expended_Cr": 96, "Balance_Budget_Cr": 44, "Utilization_Pct": 68.6, "Monthly_Burn_Rate_Cr": 10.7, "Required_Burn_Rate_Cr": 11, "Last_Expenditure_Date": "2026-05-30", "Lapse_Risk": "LOW" },
+        { "Scheme_Code": "BUD-008", "Scheme_Name": "Land Pooling Returnable Plots", "Annual_Budget_Cr": 160, "Released_Cr": 105, "Expended_Cr": 61, "Balance_Budget_Cr": 99, "Utilization_Pct": 38.1, "Monthly_Burn_Rate_Cr": 6.8, "Required_Burn_Rate_Cr": 24.8, "Last_Expenditure_Date": "2026-04-21", "Lapse_Risk": "CRITICAL" }
+      ]
+    },
+    {
+      "id": "ppp",
+      "title": "PPP Liability & Disclosure Register",
+      "sourceFile": "project4_ppp_liability.py",
+      "description": "Profiles PPP project costs, VGF, annuities, guarantees, revenue share receivables, and financial-statement disclosure gaps.",
+      "statusField": "Disclosure_Status",
+      "amountField": "Total_Govt_Obligation_Cr",
+      "dateField": "Concession_End",
+      "kpis": [
+        { "label": "Projects", "value": 8, "suffix": "" },
+        { "label": "Project cost", "value": 2840, "suffix": " Cr" },
+        { "label": "Govt obligation", "value": 1875, "suffix": " Cr" },
+        { "label": "Disclosure gaps", "value": 3, "suffix": "" }
+      ],
+      "records": [
+        { "Project_ID": "PPP-001", "Project_Name": "Integrated Bus Terminal", "Sector": "Transport", "PPP_Model": "DBFOT", "Total_Project_Cost_Cr": 420, "VGF_Amount_Cr": 84, "Annuity_Cr": 0, "Guarantee_Amount_Cr": 38, "Revenue_Share_Receivable_Cr": 4.6, "Total_Govt_Obligation_Cr": 122, "Concession_End": "2048-11-15", "Disclosure_Status": "DISCLOSED" },
+        { "Project_ID": "PPP-002", "Project_Name": "Water Treatment PPP", "Sector": "Water", "PPP_Model": "HAM", "Total_Project_Cost_Cr": 360, "VGF_Amount_Cr": 0, "Annuity_Cr": 18, "Guarantee_Amount_Cr": 22, "Revenue_Share_Receivable_Cr": 0, "Total_Govt_Obligation_Cr": 382, "Concession_End": "2042-05-30", "Disclosure_Status": "GAP" },
+        { "Project_ID": "PPP-003", "Project_Name": "Solar Rooftop Estate", "Sector": "Energy", "PPP_Model": "BOOT", "Total_Project_Cost_Cr": 120, "VGF_Amount_Cr": 24, "Annuity_Cr": 0, "Guarantee_Amount_Cr": 0, "Revenue_Share_Receivable_Cr": 1.8, "Total_Govt_Obligation_Cr": 24, "Concession_End": "2041-02-01", "Disclosure_Status": "DISCLOSED" },
+        { "Project_ID": "PPP-004", "Project_Name": "Multi-level Parking District", "Sector": "Urban Services", "PPP_Model": "BOT-Toll", "Total_Project_Cost_Cr": 95, "VGF_Amount_Cr": 19, "Annuity_Cr": 0, "Guarantee_Amount_Cr": 11, "Revenue_Share_Receivable_Cr": 0.9, "Total_Govt_Obligation_Cr": 30, "Concession_End": "2040-09-17", "Disclosure_Status": "GAP" },
+        { "Project_ID": "PPP-005", "Project_Name": "Government Complex O&M", "Sector": "Facilities", "PPP_Model": "OMT", "Total_Project_Cost_Cr": 210, "VGF_Amount_Cr": 0, "Annuity_Cr": 9.5, "Guarantee_Amount_Cr": 0, "Revenue_Share_Receivable_Cr": 0.5, "Total_Govt_Obligation_Cr": 190, "Concession_End": "2046-08-21", "Disclosure_Status": "DISCLOSED" },
+        { "Project_ID": "PPP-006", "Project_Name": "Solid Waste Processing", "Sector": "Sanitation", "PPP_Model": "DBFOT", "Total_Project_Cost_Cr": 175, "VGF_Amount_Cr": 35, "Annuity_Cr": 0, "Guarantee_Amount_Cr": 14, "Revenue_Share_Receivable_Cr": 2.2, "Total_Govt_Obligation_Cr": 49, "Concession_End": "2045-03-12", "Disclosure_Status": "DISCLOSED" },
+        { "Project_ID": "PPP-007", "Project_Name": "City Fibre Network", "Sector": "ICT", "PPP_Model": "BOO", "Total_Project_Cost_Cr": 260, "VGF_Amount_Cr": 0, "Annuity_Cr": 0, "Guarantee_Amount_Cr": 18, "Revenue_Share_Receivable_Cr": 6.1, "Total_Govt_Obligation_Cr": 18, "Concession_End": "2039-12-04", "Disclosure_Status": "GAP" },
+        { "Project_ID": "PPP-008", "Project_Name": "Affordable Housing Rental", "Sector": "Housing", "PPP_Model": "HAM", "Total_Project_Cost_Cr": 1200, "VGF_Amount_Cr": 0, "Annuity_Cr": 32, "Guarantee_Amount_Cr": 74, "Revenue_Share_Receivable_Cr": 0, "Total_Govt_Obligation_Cr": 1060, "Concession_End": "2051-07-19", "Disclosure_Status": "DISCLOSED" }
+      ]
+    }
+  ]
+};

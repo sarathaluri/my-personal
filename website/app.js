@@ -146,9 +146,23 @@ function downloadCsv() {
   URL.revokeObjectURL(url);
 }
 
+async function loadDashboardData() {
+  try {
+    const response = await fetch('data/dashboard-data.json');
+    if (!response.ok) {
+      throw new Error(`Dataset request failed with ${response.status}`);
+    }
+    return response.json();
+  } catch (error) {
+    if (window.DASHBOARD_DATA) {
+      return window.DASHBOARD_DATA;
+    }
+    throw error;
+  }
+}
+
 async function boot() {
-  const response = await fetch('data/dashboard-data.json');
-  state.data = await response.json();
+  state.data = await loadDashboardData();
   state.currentToolId = state.data.tools[0].id;
 
   el('tool-select').addEventListener('change', (event) => {
